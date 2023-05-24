@@ -12,7 +12,7 @@ export const NEXT_PAGE = "NEXT_PAGE";
 export const PREV_PAGE = "PREV_PAGE";
 
 export const getPokemons = () => {
-    const endpoint = 'http://localhost:3001/pokemons';
+    const endpoint = '/pokemons';
     return (dispatch) => {
         axios.get(endpoint)
             .then((response) => {
@@ -24,7 +24,7 @@ export const getPokemons = () => {
     }
 }
 export const getTypes = () => {
-    const endpoint = 'http://localhost:3001/types';
+    const endpoint = '/types';
     return (dispatch) => {
         axios.get(endpoint)
             .then((response) => {
@@ -37,7 +37,7 @@ export const getTypes = () => {
 }
 
 export const getDetail = (id)=>{
-    const endpoint = `http://localhost:3001/pokemons/${id}`;
+    const endpoint = `/pokemons/${id}`;
     return (dispatch)=>{
         axios.get(endpoint)
         .then((response)=>{
@@ -57,7 +57,7 @@ export const cleanDetail = ()=>{
 }
 
 export const getByName = (name)=>{
-    const endpoint = `http://localhost:3001/pokemons?name=${name}`;
+    const endpoint = `/pokemons?name=${name}`;
     return (dispatch)=>{
         axios.get(endpoint)
         .then((response)=>{

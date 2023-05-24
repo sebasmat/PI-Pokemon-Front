@@ -45,7 +45,7 @@ export default function Form() {
             errors.defense || errors.speed || errors.height || errors.weight || errors.type1 || errors.type2) {
             alert("Errors in the inputs");
         } else {
-            axios.post('http://localhost:3001/pokemons', infoPokemon)
+            axios.post('/pokemons', infoPokemon)
                 .then(res => alert(res.data))
                 .catch(err => alert(err));
             setInfoPokemon({
